@@ -20,38 +20,6 @@ import java.util.TimerTask;
 
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     public static void 
 
 } 
@@ -71,3 +39,28 @@ public int getWorkTime() {
     public class Timer {
 
     }
+
+    public class Main {
+
+        public static void main(String[] args) {
+            //Timer thing test
+
+            Timer timer = new Timer();
+            Timertask task = new Timertask() {
+
+                int count = 10;
+
+                @Override
+                public void run() {
+                    System.out.println(count);
+                    count--;
+                    if (count < 0) {
+                        System.out.println("Pomodoro break done, Breakt time start!");
+                    }
+
+                }
+            };
+
+        }
+    
+}
